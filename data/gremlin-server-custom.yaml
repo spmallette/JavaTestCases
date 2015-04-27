@@ -1,0 +1,22 @@
+host: 0.0.0.0
+port: 8182
+threadPoolWorker: 4
+gremlinPool: 8
+scriptEvaluationTimeout: 30000
+serializedResponseTimeout: 30000
+graphs: {}
+plugins: []
+scriptEngines: {}
+serializers:
+  - { className: com.tinkerpop.gremlin.driver.ser.KryoMessageSerializerV1d0 }
+  - { className: com.tinkerpop.gremlin.driver.ser.KryoMessageSerializerV1d0, config: { serializeResultToString: true }}
+metrics: {
+  slf4jReporter: {enabled: false, interval: 1800000}}
+threadPoolBoss: 1
+maxInitialLineLength: 8192
+maxHeaderSize: 8192
+maxChunkSize: 32768
+maxContentLength: 327680
+maxAccumulationBufferComponents: 2048
+resultIterationBatchSize: 64
+
