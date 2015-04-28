@@ -5,7 +5,6 @@ import org.apache.tinkerpop.gremlin.driver.Cluster;
 import org.apache.tinkerpop.gremlin.driver.ResultSet;
 import org.apache.tinkerpop.gremlin.driver.Result;
 import org.apache.tinkerpop.gremlin.driver.message.RequestMessage;
-import org.apache.tinkerpop.gremlin.driver.ser.SerTokens;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -82,8 +81,8 @@ public class StressTestGremlin {
         System.out.println(String.format("Thread %d starting. Will run %d ops", id, n));
         GremlinClient gc = new GremlinClient();
         boolean ok;
+        gc.newClient();
         for (long i = 0; i < n; i++) {
-            gc.newClient();
             //gc.newCluster();
             ok = checkStatusOp(i, gc);
             if (!ok) {
