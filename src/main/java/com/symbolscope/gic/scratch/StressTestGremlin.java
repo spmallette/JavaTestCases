@@ -1,10 +1,11 @@
 package com.symbolscope.gic.scratch;
 
-import com.tinkerpop.gremlin.driver.Client;
-import com.tinkerpop.gremlin.driver.Cluster;
-import com.tinkerpop.gremlin.driver.ResultSet;
-import com.tinkerpop.gremlin.driver.Result;
-import com.tinkerpop.gremlin.driver.message.RequestMessage;
+import org.apache.tinkerpop.gremlin.driver.Client;
+import org.apache.tinkerpop.gremlin.driver.Cluster;
+import org.apache.tinkerpop.gremlin.driver.ResultSet;
+import org.apache.tinkerpop.gremlin.driver.Result;
+import org.apache.tinkerpop.gremlin.driver.message.RequestMessage;
+import org.apache.tinkerpop.gremlin.driver.ser.SerTokens;
 
 import java.util.ArrayList;
 import java.util.HashMap;
